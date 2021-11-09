@@ -5,12 +5,16 @@ import Home from "./pages/home";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import About from "./pages/about";
 import Profile from "./pages/Profile";
+import Alert from "./components/alert";
+import AlertState from "./context/alert/AlertState";
 
 function App() {
   return (
+      <AlertState>
       <BrowserRouter>
           <Navbar/>
           <div className='container-fluid pt-4'>
+              <Alert alert={{type: '', text:'test alert'}}/>
               <Routes>
                   <Route path='/' exact element={<Home/>}/>
                   <Route path='/about' element={<About/>}/>
@@ -18,6 +22,7 @@ function App() {
               </Routes>
           </div>
           </BrowserRouter>
+      </AlertState>
   )
 }
 

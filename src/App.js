@@ -4,10 +4,11 @@ import Navbar from './components/navbar'
 import Home from "./pages/home";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import About from "./pages/about";
-import Profile from "./pages/Profile";
+import {Profile} from "./pages/Profile";
 import Alert from "./components/alert";
 import AlertState from "./context/alert/AlertState";
 import {GithubState} from "./context/github/githubState";
+
 
 function App() {
   return (
